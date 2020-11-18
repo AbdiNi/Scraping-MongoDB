@@ -1,0 +1,32 @@
+
+ce projet a été construit en suivant "en global" ces étapes : 
+
+1) Création d'un nouveau projet JobSearch par scrapy : 
+> scrapy startproject JobSearch  : création du nouveau projet tutorial (from outside mongoDB in terminal)
+    the folder contains = 
+    * scrapy.cfg            # deploy configuration file
+    * tutorial/             # project's Python module, you'll import your code from here
+      - items.py          # project items definition file
+      - middlewares.py    # project middlewares file
+      - pipelines.py      # project pipelines file 
+      - settings.py       # project settings file
+      - spiders/          # a directory where you'll later put your spiders
+      
+
+2) Création de notre spider : Le fichier flashbot dans le dossier spyder 
+    ce fichier .py est sous forme d'une classe qui à le nom du spider comme attribut et deux méthodes start_requests() et parse()
+    start_requests ou on met les urls 
+    parse() qui va gérer les "downloaded" de chaque request..
+    
+3) Développement du pipline "pipelines.py " pour qu'il revoie les items collecté par spider vers la base de donnée MongoDB.
+   
+    
+4) Lancement du scrapy project : 
+> scrapy crawl flashbot
+
+
+5) ce connecter à la base de donnée items depuis jupyter notebook et affichage des 25 élements..
+
+
+
+
